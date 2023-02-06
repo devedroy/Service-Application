@@ -12,7 +12,6 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i("MyService", "in onStartCommand " + Thread.currentThread().getId());
-        stopSelf();
         return super.onStartCommand(intent, flags, startId);
     }
 

@@ -32,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
             mStopLoop = true;
             startService(serviceIntent);
         });
+
+        binding.btnStopService.setOnClickListener(v -> {
+            Log.i("MyService", "btnStopService clicked");
+            mStopLoop = false;
+            stopService(serviceIntent);
+        });
     }
 
 
